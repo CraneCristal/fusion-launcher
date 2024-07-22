@@ -3,3 +3,4 @@
 
 # Build files
 /target/
+/app/assets/styles/compiled.css

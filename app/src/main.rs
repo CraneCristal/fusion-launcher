@@ -1,7 +1,7 @@
-use crate::app::App;
+mod ui;
 
-mod app;
+use crate::ui::{get_config, App};
 
 fn main() {
-    dioxus::launch(App);
+    dioxus::desktop::launch::launch(App, vec![], get_config());
 }
