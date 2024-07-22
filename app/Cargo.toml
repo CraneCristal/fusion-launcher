@@ -1,0 +1,10 @@
+[package]
+name = "fusion-launcher"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.5", features = ["desktop", "router"] }
+
+[build-dependencies]
+glob = "0.3"
