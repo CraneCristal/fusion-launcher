@@ -1,0 +1,14 @@
+#layout-container {
+    display: flex;
+}
+
+#layout-nav {
+    min-width: fit-content;
+    width: 12%;
+    min-height: fit-content;
+}
+
+#layout-children {
+    flex: 1;
+    overflow: auto;
+}

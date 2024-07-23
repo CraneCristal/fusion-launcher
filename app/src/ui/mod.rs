@@ -1,21 +1,18 @@
-mod style;
+pub mod app;
+mod component;
+mod page;
+mod route;
 
-use crate::ui::style::get_app_style;
 use dioxus::desktop::{Config, WindowBuilder};
-use dioxus::prelude::*;
 
-#[component]
-pub fn App() -> Element {
-    rsx! {
-        style { "{get_app_style()}" }
-    }
+const APP_STYLE: &str = include_str!("../../assets/styles/compiled.css");
+
+pub fn get_app_style() -> String {
+    APP_STYLE.to_string()
 }
 
-pub fn get_config() -> Config {
+pub fn get_app_config() -> Config {
     Config::new()
-        .with_window(
-            WindowBuilder::new()
-            .with_title("Fusion Launcher")
-        )
+        .with_window(WindowBuilder::new().with_title("Fusion Launcher"))
         .with_menu(None)
 }
