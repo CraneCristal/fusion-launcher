@@ -1,11 +1,30 @@
 #layout-container {
     display: flex;
+    height: 100%;
 }
 
 #layout-nav {
     min-width: fit-content;
     width: 12%;
-    min-height: fit-content;
+    height: calc(100% - 20px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+}
+
+#layout-nav .radio-button {
+    width: 100%;
+}
+
+#layout-nav .settings-button {
+    margin-top: auto;
+}
+
+#layout-nav img {
+    width: 22px;
+    height: 22px;
 }
 
 #layout-children {

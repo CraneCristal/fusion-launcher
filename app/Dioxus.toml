@@ -1,0 +1,16 @@
+[application]
+name = "fusion-launcher"
+default_platform = "desktop"
+out_dir = "dist"
+asset_dir = "assets"
+
+[web.app]
+title = "fusion-launcher"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets"]
+
+[web.resource]
+
+[web.resource.dev]

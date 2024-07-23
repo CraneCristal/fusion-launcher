@@ -4,10 +4,9 @@ use dioxus::prelude::*;
 #[component]
 pub fn Home() -> Element {
     rsx! {
+        link {rel: "stylesheet", href: "assets/styles/page/home.css"}
         Layout {
-            children: rsx! {
-                
-            }
+            span {"Home"}
         }
     }
 }
