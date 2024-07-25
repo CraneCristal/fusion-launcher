@@ -1,5 +1,5 @@
 use dioxus::prelude::*;
-use crate::ui::page::layout::Layout;
+use crate::ui::page::Layout;
 
 #[component]
 pub fn GameLib() -> Element {

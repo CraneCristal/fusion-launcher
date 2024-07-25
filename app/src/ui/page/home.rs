@@ -1,4 +1,4 @@
-use crate::ui::page::layout::Layout;
+use crate::ui::page::Layout;
 use dioxus::prelude::*;
 
 #[component]

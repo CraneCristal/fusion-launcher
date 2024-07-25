@@ -2,6 +2,7 @@ pub mod app;
 mod component;
 mod page;
 mod route;
+mod localization;
 
 use dioxus::desktop::{Config, WindowBuilder};
 
