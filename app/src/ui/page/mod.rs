@@ -1,17 +1,23 @@
+use crate::ui::component::common::button::RadioButton;
+use crate::utils::dir::get_assets_dir;
 use dioxus::prelude::*;
 use dioxus_sdk::i18n::use_i18;
-use crate::ui::component::common::button::RadioButton;
+use dioxus_sdk::translate;
 
-pub mod home;
 pub mod game_lib;
+pub mod home;
 pub mod plugin;
 
 #[component]
 pub fn Layout(children: Element) -> Element {
+    let assets_dir = get_assets_dir();
+    let assets_dir_str = assets_dir.to_str().unwrap();
+
     let current_route = router().current_route_string();
     let i18 = use_i18();
+
     rsx! {
-        link { rel: "stylesheet", href: "assets/styles/page/layout.css" }
+        style { {include_str!("style/layout.css")} }
         div { id: "layout-container",
             nav { id: "layout-nav",
                 RadioButton {
@@ -21,7 +27,7 @@ pub fn Layout(children: Element) -> Element {
                     is_selected: current_route == "/",
 
                     img {
-                        src: "assets/images/icons/home.svg",
+                        src: format!("{}/images/icons/home.svg", assets_dir_str),
                         alt: "home-icon"
                     }
                     {translate!(i18, "messages.home")}
@@ -33,33 +39,33 @@ pub fn Layout(children: Element) -> Element {
                     is_selected: current_route == "/game-lib",
 
                     img {
-                        src: "assets/images/icons/library.svg",
-                        alt: "home-icon"
+                        src: format!("{}/images/icons/library.svg", assets_dir_str),
+                        alt: "game-lib-icon"
                     }
-                    "Games"
+                    {translate!(i18, "messages.games")}
                 }
                 RadioButton {
                     on_click: move |_event| {
                         router().push("/plugins");
                     },
                     is_selected: current_route == "/plugins",
-                    
+
                     img {
-                        src: "assets/images/icons/plugins.svg",
-                        alt: "home-icon"
+                        src: format!("{}/images/icons/plugins.svg", assets_dir_str),
+                        alt: "plugins-icon"
                     }
-                    "Plugins"
+                    {translate!(i18, "messages.plugins")}
                 }
                 RadioButton {
                     on_click: move |_event| {},
                     is_selected: current_route == "/settings",
                     class: "settings-button",
-                    
+
                     img {
-                        src: "assets/images/icons/settings.svg",
-                        alt: "home-icon"
+                        src: format!("{}/images/icons/settings.svg", assets_dir_str),
+                        alt: "settings-icon"
                     }
-                    "Settings"
+                    {translate!(i18, "messages.settings")}
                 }
             }
             div { id: "layout-children", { children } }

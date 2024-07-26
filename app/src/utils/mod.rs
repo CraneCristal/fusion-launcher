@@ -1,7 +1,3 @@
-use directories::ProjectDirs;
-
 pub mod json;
+pub mod dir;
 
-pub fn get_app_dirs() -> ProjectDirs {
-    ProjectDirs::from("com", "", "fusion-launcher").unwrap()
-}

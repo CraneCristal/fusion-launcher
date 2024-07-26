@@ -1,6 +1,6 @@
 use crate::error::Error;
 use crate::model::config::AppConfig;
-use crate::utils::get_app_dirs;
+use crate::utils::dir::get_app_dirs;
 use crate::utils::json::{deserialize_from_file, serialize_to_file};
 use std::fs;
 use std::fs::File;

@@ -2,9 +2,9 @@ use crate::ui::page::Layout;
 use dioxus::prelude::*;
 
 #[component]
-pub fn PluginBrowser() -> Element {
+pub fn PluginsPage() -> Element {
     rsx! {
-        link { rel: "stylesheet", href: "assets/styles/page/plugins.css" }
+        style { {include_str!("style/plugin.css")} }
         Layout {
             span { "Plugins" }
         }

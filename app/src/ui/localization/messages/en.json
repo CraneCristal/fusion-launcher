@@ -2,7 +2,10 @@
   "id": "en",
   "texts": {
     "messages": {
-      "home": "Home"
+      "home": "Home",
+      "games": "Games",
+      "plugins": "Plugins",
+      "settings": "Settings"
     }
   }
 }

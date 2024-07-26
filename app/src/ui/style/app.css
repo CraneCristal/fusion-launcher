@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #151515;
+    --secondary-color: #2B2B2B;
+    --tertiary-color: #606060;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+    background: var(--primary-color);
+}
+
+#main {
+    height: 100%;
+}
+
+* {
+    font-family: "Mont Blanc", serif;
+}

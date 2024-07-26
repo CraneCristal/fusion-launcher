@@ -2,11 +2,11 @@ use dioxus::prelude::*;
 use crate::ui::page::Layout;
 
 #[component]
-pub fn GameLib() -> Element {
+pub fn GameLibPage() -> Element {
     rsx! {
-        link {rel: "stylesheet", href: "assets/styles/page/game_lib.css"}
-        Layout {
-            span {"Game Lib"}
+        style { {include_str!("style/game_lib.css")} }
+        Layout { 
+            span { "Game Lib" }
         }
     }
 }

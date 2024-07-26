@@ -4,10 +4,7 @@ use dioxus::prelude::*;
 pub fn Button(children: Element, class: Option<String>, on_click: EventHandler<MouseEvent>) -> Element {
     let class = class.unwrap_or(String::new());
     rsx! {
-        link {
-            rel: "stylesheet",
-            href: "assets/styles/component/common/button.css"
-        }
+        style { {include_str!("style/button.css")} }
         button {
             class: "app-button {class}",
             onclick: move |event| on_click.call(event),
@@ -24,10 +21,7 @@ pub fn RadioButton(children: Element, class: Option<String>, on_click: EventHand
     }
 
     rsx! {
-        link {
-            rel: "stylesheet",
-            href: "assets/styles/component/common/button.css"
-        }
+        style { {include_str!("style/button.css")} }
         button {
             class: "app-button radio-button {class}",
             onclick: move |event| on_click.call(event),

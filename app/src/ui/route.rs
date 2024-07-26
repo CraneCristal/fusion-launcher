@@ -1,16 +1,16 @@
-use crate::ui::page::game_lib::GameLib;
-use crate::ui::page::home::Home;
-use crate::ui::page::plugin::PluginBrowser;
+use crate::ui::page::game_lib::GameLibPage;
+use crate::ui::page::home::HomePage;
+use crate::ui::page::plugin::PluginsPage;
 use dioxus::prelude::*;
 
 #[derive(Routable, Clone, Debug)]
 pub enum Route {
     #[route("/")]
-    Home {},
+    HomePage {},
 
     #[route("/game-lib")]
-    GameLib {},
+    GameLibPage {},
 
     #[route("/plugins")]
-    PluginBrowser {},
+    PluginsPage {},
 }
