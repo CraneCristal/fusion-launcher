@@ -3,4 +3,4 @@
 
 # Build files
 /target/
-/app/dist/
+/app/src/ui/style/compiled.css

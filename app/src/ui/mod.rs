@@ -3,6 +3,7 @@ mod component;
 mod localization;
 mod page;
 mod route;
+mod layout;
 
 use crate::utils::dir::get_assets_dir;
 use dioxus::desktop::{Config, WindowBuilder};

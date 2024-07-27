@@ -1,10 +1,9 @@
 use dioxus::prelude::*;
-use crate::ui::page::Layout;
+use crate::ui::layout::Layout;
 
 #[component]
 pub fn GameLibPage() -> Element {
     rsx! {
-        style { {include_str!("style/game_lib.css")} }
         Layout { 
             span { "Game Lib" }
         }

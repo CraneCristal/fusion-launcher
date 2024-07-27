@@ -6,7 +6,7 @@ use dioxus::prelude::*;
 pub fn App() -> Element {
     init_localization();
     rsx! {
-        style { {include_str!("style/app.css")} }
+        style { {include_str!("style/compiled.css")} }
         Router::<Route> {}
     }
 }
